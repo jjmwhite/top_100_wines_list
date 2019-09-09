@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
   return(
     <header>
-      <h1>Explore the Top 100 Wines</h1>
+      <h1>Explore the Top 100 Wines of 2019</h1>
       <div className='sticky'>
         <p>Hover over any wine to display tasting notes:</p>
         <div className='tasting-notes' rows='15'></div>

@@ -24,11 +24,11 @@ class WineList extends React.Component {
     }
 
     return(
-      <main>
+      <div className='wine-table-wrapper'>
         <div id='wine-table'>
           {allWines}
         </div>
-      </main>
+      </div>
     )
   };
 };
