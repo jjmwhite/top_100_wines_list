@@ -1,0 +1,106 @@
+body {
+  font-family: 'Lato', sans-serif;
+  background: #ffffec;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+h2, h3, h4 {
+  margin: 0 10px;
+}
+
+.sparkling {
+  background: #f9eece;
+  color: #af7f06;
+}
+
+.white {
+  background: #f3f9e7;
+  color: #7a8850;
+}
+
+.red {
+  background: #efe7e7;
+  color: #900000;
+}
+
+.dessert {
+  background: #d2b0bb;
+  color: #5f0526;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #ffffec;
+}
+
+header h1 {
+  padding: 20px;
+  text-decoration: underline;
+}
+
+.sticky p {
+  margin: 10px 20px;
+  font-size: 20px;
+}
+
+.tasting-notes {
+  font-size: 16px;
+  padding: 20px;
+  border: 1px solid lightgrey;
+  box-shadow: inset 0px 0px 5px #888888;
+  border-radius: 0 70px 70px 0;
+  min-width: 1186px;
+  width: 96.7%;
+  height: 50px;
+}
+
+.wine-entry, .guide {
+  display: flex;
+  align-items: center;
+  border: 2px solid transparent;
+  border-radius: 0 50px 50px 0;
+  margin: 5px 0;
+  padding: 10px;
+  min-width: 1200px;
+  width: 98%;
+  height: 70px;
+}
+
+.wine-entry:hover {
+  border: 2px solid currentColor;
+}
+
+.guide {
+  background: #c5ddca;
+}
+
+.wine-entry > h2, .guide > h2 {
+  margin: 0 10px 0 0;
+  background: #feea7d;
+  border-radius: 50px;
+  padding: 8px;
+  border: 2px solid gold;
+  font-size: 22px;
+}
+
+.guide > h2 {
+  font-size: 13px;
+  padding: 14px 6px;
+  font-weight: bold;
+}
+
+.wine-entry > h4, .guide > h4 {
+  margin: 0 10px;
+  width: 3%;
+}
+
+.primary-details .secondary-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.primary-details {
+  width: 60%
+}

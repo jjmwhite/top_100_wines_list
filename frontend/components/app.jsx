@@ -1,8 +1,13 @@
 import React from 'react';
+import Header from './header';
+import WineList from './wine_list';
 
 const App = () => {
   return(
-    <h1>Explore the Top 100 Wines</h1>
+    <>
+      <Header />
+      <WineList />
+    </>
   )
 };
 

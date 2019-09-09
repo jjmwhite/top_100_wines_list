@@ -1,5 +1,5 @@
 json.bottles @bottles.each do |bottle|
-  json.set! bottle.id do
+
     json.id bottle.bottle_id
     json.wineName bottle.wine_name
     json.wineryName bottle.winery_name
@@ -8,5 +8,5 @@ json.bottles @bottles.each do |bottle|
     json.color bottle.color 
     json.score bottle.score
     json.rank bottle.top100_rank
-  end
+
 end
