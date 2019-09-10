@@ -2,36 +2,20 @@ import React from 'react';
 
 const WineEntry = (props) => {
   const wine = props.wine;
+  const tastingNotes = document.getElementsByClassName('tasting-notes')[0];
 
   function fetchTastingNotes(id) {
     fetch(`https://top-100-example.s3.amazonaws.com/${id}.json`)
       .then(response => response.json() )
       .then(response => {
-        const tastingNotes = document.getElementsByClassName('tasting-notes')[0];
         tastingNotes.id = response.id;
         tastingNotes.innerHTML = response.note;
       });
   };
 
-  const _debounce = (cb, time) => {
-    let timeout;
-    return function () {
-      const functionCall = () => {
-        cb.apply(this, arguments)
-      };
-      clearTimeout(timeout);
-      timeout = setTimeout(functionCall, time);
-    };
-  };
-
-  const debouncedFetchTastingNotes = _debounce((id) => {
-      return fetchTastingNotes(id)
-    }, 500);
-
   const handleMouseover = (e) => {
     e.stopPropagation();
-    const tastingNotes = document.getElementsByClassName('tasting-notes')[0];
-    if (e.currentTarget.id !== tastingNotes.id) { debouncedFetchTastingNotes(e.currentTarget.id) };
+    if (e.currentTarget.id !== tastingNotes.id) { fetchTastingNotes(e.currentTarget.id) };
   };
 
   let icon;

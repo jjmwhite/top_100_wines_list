@@ -1,6 +1,10 @@
 # README
 
-### To run locally:
+### To set up, navigate to root directory and run: 
 * ```bundle install```
 * ```npm install```
-* In the CLI, 
+
+### To run locally: 
+* ```bundle exec rails s```
+* ```run run watch```
+* Navigate to http://localhost:3000
