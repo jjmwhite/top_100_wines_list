@@ -1,5 +1,7 @@
 # README
 
+Visit live demo: https://top-100-wines.herokuapp.com/
+
 ### To set up, navigate to root directory and run: 
 * ```bundle install```
 * ```npm install```
