@@ -24,20 +24,42 @@ const WineEntry = (props) => {
     };
   };
 
-  const callDebounce = (id) => {
-    _debounce(fetchTastingNotes(id), 1000);
-  }
+  const debouncedFetchTastingNotes = _debounce((id) => {
+      return fetchTastingNotes(id)
+    }, 500);
 
   const handleMouseover = (e) => {
     e.stopPropagation();
     const tastingNotes = document.getElementsByClassName('tasting-notes')[0];
-    if (e.currentTarget.id !== tastingNotes.id) { callDebounce(e.currentTarget.id) };
+    if (e.currentTarget.id !== tastingNotes.id) { debouncedFetchTastingNotes(e.currentTarget.id) };
   };
 
+  let icon;
+  switch (wine.color) {
+    case 'red':
+      icon = redImg;
+      break;
+    case 'white':
+      icon = whiteImg;
+      break;
+    case 'dessert':
+      icon = dessertImg;
+      break;
+    case 'sparkling':
+      icon = sparklingImg;
+      break;
+    case 'blush':
+      icon = blushImg;
+      break;
+  };
 
   return (
-    <section id={wine.id} className={`wine-entry ${wine.color}`} onMouseOver={handleMouseover}>
+    <section id={wine.id} className={`wine-entry ${wine.color}`} onMouseMove={handleMouseover}>
       <h4>#{wine.rank}</h4>
+      <div className='wine-color'>
+        <img src={icon} />
+        <p>{wine.color}</p>
+      </div>
       <h2>{wine.score}</h2>
       <div className='primary-details'>
         <h3>{wine.wineName}</h3>
@@ -49,6 +71,6 @@ const WineEntry = (props) => {
       </div>
     </section>
   )
-}
+};
 
 export default WineEntry;

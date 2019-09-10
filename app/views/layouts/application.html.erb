@@ -2,12 +2,21 @@
 <html>
   <head>
     <title>Wine Spectator's Top 100</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Libre+Caslon+Text&display=swap" rel="stylesheet">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
+
+  <script type='text/javascript'>
+    window.color = '<%= image_url('style.png') %>'
+    window.dessertImg = '<%= image_url('dessert.png') %>'
+    window.redImg = '<%= image_url('red.png') %>'
+    window.whiteImg = '<%= image_url('white.png') %>'
+    window.sparklingImg = '<%= image_url('sparkling.png') %>'
+    window.blushImg = '<%= image_url('blush.png') %>'
+  </script>
 
   <body>
     <%= yield %>

@@ -5,7 +5,7 @@ class WineList extends React.Component {
   constructor() {
     super();
     this.state = { wines: [] };
-  }
+  };
 
   componentDidMount() {
     fetch('/api/bottles')
@@ -21,7 +21,7 @@ class WineList extends React.Component {
       allWines = this.state.wines.map( wine => {
         return <WineEntry wine={wine} key={wine.id}/>
       })
-    }
+    };
 
     return(
       <div className='wine-table-wrapper'>
