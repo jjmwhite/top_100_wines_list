@@ -13,7 +13,7 @@
     "react-router-dom": "^5.0.1",
     "redux": "^4.0.4",
     "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.8"
+    "webpack-cli": "^3.3.12"
   },
   "description": "Explore ratings and tasting notes for Wine Spectator's Top 100 wines",
   "version": "1.0.0",
